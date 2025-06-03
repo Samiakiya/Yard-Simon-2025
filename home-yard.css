@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: alexandria, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    gap: 0px;
+    grid-template-areas:
+      "left-section right-section";
+}
+
+.left-section {
+    grid-area: left-section;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    margin-top: 0; /* Ensure no white space on top */
+}
+
+.right-section {
+    grid-area: right-section;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding: 0; /* Ensure no white space on top */
+}
+
+.right-section h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.right-section img {
+    width: 60%;
+    margin-left: -70px;
+    margin-top: 140px;
+    margin-right: 315px;
+   
+   
+}
+.logo {
+    width: 100px;
+
+}
+.logo {
+    position: fixed;
+    width: 100px;
+    top: 0;
+    left: 0;
+    margin: 20px;
+}
+
+
+.navbar-right, .navbar-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+}
+
+.navbar-left {
+    left: 50%;
+    transform: translateX(-100%);
+}
+
+.navbar-right {
+    left: 50%;
+    transform: translateX(0%);
+}
+
+.navbar-left ul, .navbar-right ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-left ul li, .navbar-right ul li {
+    margin-right: 20px; /* Adjust spacing between items as needed */
+}
+
+.navbar-left a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    font-weight: bold;
+}
+.navbar-right a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.navbar-left  ul li a:hover, .navbar-right ul li a:hover {
+    color: #6fd8d7;
+}
+
+.skills {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.skills li:before {
+    content: '\2713';
+    color: #82d9d8;
+    position: absolute;
+    left: 0;
+}
+/* Hamburger button */
+.hamburger {
+    display: none;
+    position: fixed;
+    top: 20px;
+    right: 70px;
+    background-color: #82d9d8;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Hamburger menu container (hidden by default) */
+.hamburger-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    right: 10px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Show menu when visible class is toggled */
+.hamburger-menu.visible {
+    display: block;
+}
+
+/* Style for navbars within the hamburger menu */
+.hamburger-menu .navbar-left, .hamburger-menu .navbar-right {
+    margin-bottom: 20px; /* Space between menus */
+}
+
+.hamburger-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center items */
+}
+
+.hamburger-menu ul li {
+    margin: 10px 0;
+}
+
+
+.hamburger-menu ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.hamburger-menu ul li a:hover {
+    color: #6fd8d7;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "left-section"
+          "right-section";
+    }
+
+    .left-section, .right-section {
+        padding: 30px;
+    }
+
+    .right-section img {
+        padding: 100px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .navbar-left, .navbar-right {
+        display: none; /* Hide original menus on small screens */
+    }
+    .container {
+        padding-top: 60px; /* Adjust padding to prevent content from being hidden behind the navbar */
+    }
+}

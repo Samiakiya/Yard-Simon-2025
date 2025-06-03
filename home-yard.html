@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="home-yard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <div class="hamburger-menu"> <!-- Add this div for the menu -->
+            <nav>
+                <ul>
+                    <li><a href="#">Over ons</a></li>
+                    <li><a href="#">Cases</a></li>
+                    <li><a href="#">Inspiratie</a></li>
+                    <li><a href="#">Events</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+        <div class="left-section">
+
+
+            <nav class="navbar-left">
+                <ul>
+                    <li class="left-item"><a href="#">Over ons</a></li>
+                    <li class="left-item"><a href="#">Cases</a></li>
+                </ul>
+            </nav>
+
+
+
+            <div class="left">
+                <h2>Dear Yard,</h2>
+                <p>My name is Saymon Angosom. I am in my first year of studying Software Development. I enjoy
+                    learning new programming skills and
+                    working on projects. I am excited to apply what I’ve learned so far and improve my abilities. I’m
+                    always eager to learn more and contribute to interesting projects.</p>
+                <ul class="skills">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="right-section">
+            <nav class="navbar-right">
+                <ul>
+                    <li class="right-item"><a href="#">Inspiratie</a></li>
+                    <li class="right-item"><a href="#">Events</a></li>
+                </ul>
+            </nav>
+            <h2>Welcome to My Yard Application</h2>
+            <img src="/Images/simon foto.jpg" alt="Person working at a cafe" class="image">
+        </div>
+
+        <div class="logo">
+            <img src="Images/logo.png" alt="Yard Logo" class="logo">
+        </div>
+
+
+
+    </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            hamburgerMenu.classList.toggle('visible');
+        }
+
+    </script>
+    </script>
+
+
+
+</body>
+
+</html>

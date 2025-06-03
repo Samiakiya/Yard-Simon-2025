@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "Images"
+		},
+		{
+			"path": "Mijn designe"
+		},
+		{
+			"path": "yard site"
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5504,
+		"liveServer.settings.multiRootWorkspaceName": "Yard"
+	}
+}
